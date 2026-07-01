@@ -1,4 +1,4 @@
-# SparkleClean Pro - Cleaning Company Website
+# Auswide cleaning - Cleaning Company Website
 
 A production-ready full stack cleaning company website built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **Shadcn/UI**, **Framer Motion**, and **Supabase**.
 

@@ -9,7 +9,7 @@ import ContactSection from '@/components/sections/ContactSection'
 import CTABanner from '@/components/sections/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'SparkleClean Pro | Professional Cleaning Services Melbourne',
+  title: 'Auswide cleaning | Professional Cleaning Services Melbourne',
   description:
     'Melbourne\'s most trusted professional cleaning company. Residential, commercial, office, end-of-lease, carpet & deep cleaning. Fully insured, police-checked. Free quotes.',
   alternates: {

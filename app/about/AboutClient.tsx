@@ -67,7 +67,7 @@ export default function AboutClient() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium mb-6"
           >
-            About SparkleClean Pro
+            About Auswide cleaning
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export default function AboutClient() {
             transition={{ delay: 0.2 }}
             className="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto"
           >
-            For over 10 years, SparkleClean Pro has been helping Melbourne families and businesses
+            For over 10 years, Auswide cleaning has been helping Melbourne families and businesses
             maintain beautiful, healthy spaces. Our story is one of passion, dedication, and an
             unwavering commitment to exceptional service.
           </motion.p>
@@ -117,14 +117,14 @@ export default function AboutClient() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  SparkleClean Pro was founded in 2014 by Michael and Sarah Chen, a couple who
+                  Auswide cleaning was founded in 2014 by Michael and Sarah Chen, a couple who
                   believed that professional cleaning should be accessible, reliable, and genuinely
                   excellent — not a luxury.
                 </p>
                 <p>
                   Starting with just a small team of three dedicated cleaners and a single van, we
                   built our reputation one spotlessly clean home at a time. Word spread quickly
-                  that SparkleClean Pro wasn&apos;t just another cleaning company — we were different.
+                  that Auswide cleaning wasn&apos;t just another cleaning company — we were different.
                 </p>
                 <p>
                   Today, we&apos;re proud to have served over 5,000 satisfied clients across Melbourne
@@ -238,7 +238,7 @@ export default function AboutClient() {
               Ready to Experience the Difference?
             </h2>
             <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of happy clients and discover why SparkleClean Pro is Melbourne&apos;s most trusted cleaning company.
+              Join thousands of happy clients and discover why Auswide cleaning is Melbourne&apos;s most trusted cleaning company.
             </p>
             <Link
               href="/contact"

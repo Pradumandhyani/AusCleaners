@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
             className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
             style={{ fontFamily: 'var(--font-plus-jakarta)' }}
           >
-            The SparkleClean Pro{' '}
+            The Auswide cleaning{' '}
             <span className="text-gradient">Difference</span>
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">

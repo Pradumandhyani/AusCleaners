@@ -26,7 +26,7 @@ const contactInfo = [
     icon: MapPin,
     label: 'Address',
     value: COMPANY.address,
-    sub: 'Serving all Melbourne suburbs',
+    sub: 'Serving all Brisbane suburbs',
     gradient: 'from-purple-500 to-violet-600',
   },
   {

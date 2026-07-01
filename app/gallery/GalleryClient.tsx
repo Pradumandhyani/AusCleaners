@@ -56,7 +56,7 @@ export default function GalleryClient() {
             transition={{ delay: 0.1 }}
             className="text-blue-100 text-lg"
           >
-            Real results from real clients. See the SparkleClean Pro difference across all our service types.
+            Real results from real clients. See the Auswide cleaning difference across all our service types.
           </motion.p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">

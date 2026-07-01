@@ -63,7 +63,7 @@ export default function ContactSection() {
                 icon: '📍',
                 title: 'Our Location',
                 value: COMPANY.address,
-                sub: 'Serving all Melbourne suburbs',
+                sub: 'Serving all Brisbane suburbs',
               },
             ].map((item) => (
               <div

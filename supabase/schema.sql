@@ -1,5 +1,5 @@
 -- ============================================
--- SparkleClean Pro - Supabase Schema
+-- Auswide cleaning - Supabase Schema
 -- ============================================
 
 -- Contact Enquiries Table

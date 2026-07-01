@@ -218,7 +218,7 @@ export const COMPANY = {
   tagline: 'Your Trusted Cleaning Experts',
   phone: '+61 452 419 301',
   email: 'auswide71@gmail.com',
-  address: 'Brisbane, QLD 4000',
+  address: 'Brisbane',
   hours: 'Mon–Sat: 7am – 7pm',
   abn: '12 345 678 901',
   social: {

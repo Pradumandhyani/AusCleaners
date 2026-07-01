@@ -1,5 +1,5 @@
 -- ========================================================
--- SparkleClean Pro - Database Seed Script
+-- Auswide cleaning - Database Seed Script
 -- Run this in your Supabase SQL Editor
 -- ========================================================
 

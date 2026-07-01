@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LoginClient from './LoginClient'
 
 export const metadata: Metadata = {
-  title: 'Admin Login | SparkleClean Pro',
+  title: 'Admin Login | Auswide cleaning',
   description: 'Admin dashboard login',
   robots: { index: false, follow: false },
 }

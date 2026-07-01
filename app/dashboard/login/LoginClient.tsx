@@ -61,7 +61,7 @@ export default function LoginClient() {
             <Sparkles className="h-8 w-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>
-            SparkleClean Pro
+            Auswide cleaning
           </h1>
           <p className="text-blue-200 text-sm mt-1">Admin Dashboard</p>
         </div>

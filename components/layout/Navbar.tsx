@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="bg-[#1565C0] text-white text-sm py-2 px-4 hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <span className="text-blue-100">Professional Cleaning Services · Melbourne & Surrounds</span>
+          <span className="text-blue-100">Professional Cleaning Services · Brisbane & Surrounds</span>
           <a
             href={`tel:${COMPANY.phone}`}
             className="flex items-center gap-2 font-semibold hover:text-blue-200 transition-colors"
@@ -68,9 +68,9 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <span className="font-bold text-gray-900 text-lg leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
-                  SparkleClean
+                  Auswide
                 </span>
-                <span className="font-bold text-[#1E88E5] text-lg leading-tight"> Pro</span>
+                <span className="font-bold text-[#1E88E5] text-lg leading-tight"> cleaning</span>
               </div>
             </Link>
 

@@ -54,7 +54,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-3">Enquiry Sent!</h3>
         <p className="text-gray-600 max-w-md">
-          Thank you for contacting SparkleClean Pro. We&apos;ll get back to you within 2 hours during business hours.
+          Thank you for contacting Auswide cleaning. We&apos;ll get back to you within 2 hours during business hours.
         </p>
       </motion.div>
     )

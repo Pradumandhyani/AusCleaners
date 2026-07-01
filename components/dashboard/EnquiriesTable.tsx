@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { Enquiry } from '@/types'
-import { deleteEnquiry } from '@/actions/contact'
+import { deleteEnquiry, updateEnquiryStatus } from '@/actions/contact'
 import { toast } from 'sonner'
 import { format, isToday, isAfter, subDays, startOfMonth } from 'date-fns'
 import {
@@ -33,7 +33,9 @@ import {
   Clipboard,
   Check,
   Calendar,
-  Sparkles,
+  Filter,
+  CheckSquare,
+  XSquare,
 } from 'lucide-react'
 import EnquiryModal from './EnquiryModal'
 
@@ -42,11 +44,20 @@ interface EnquiriesTableProps {
 }
 
 type DateFilter = 'all' | 'today' | 'week' | 'month'
+type StatusFilter = 'all' | 'pending' | 'accepted' | 'completed' | 'cancelled'
+
+const statusColors = {
+  pending: 'bg-yellow-100 text-yellow-800 border-yellow-200',
+  accepted: 'bg-blue-100 text-blue-800 border-blue-200',
+  completed: 'bg-green-100 text-green-800 border-green-200',
+  cancelled: 'bg-red-100 text-red-800 border-red-200',
+}
 
 export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
   const [data, setData] = useState<Enquiry[]>(initialData)
   const [searchTerm, setSearchTerm] = useState('')
   const [dateFilter, setDateFilter] = useState<DateFilter>('all')
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [sortField, setSortField] = useState<'created_at' | 'name'>('created_at')
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc')
   const [currentPage, setCurrentPage] = useState(1)
@@ -64,6 +75,27 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
     setCopiedId(id)
     toast.success('Copied to clipboard')
     setTimeout(() => setCopiedId(null), 2000)
+  }
+
+  // Update enquiry in list
+  const handleUpdate = (updated: Enquiry) => {
+    setData((prev) => prev.map((item) => (item.id === updated.id ? updated : item)))
+    if (selectedEnquiry && selectedEnquiry.id === updated.id) {
+      setSelectedEnquiry(updated)
+    }
+  }
+
+  // Quick accept status update
+  const handleQuickAccept = async (id: string) => {
+    const res = await updateEnquiryStatus(id, 'accepted')
+    if (res.success) {
+      setData((prev) =>
+        prev.map((item) => (item.id === id ? { ...item, status: 'accepted' } : item))
+      )
+      toast.success(res.message)
+    } else {
+      toast.error(res.error || res.message)
+    }
   }
 
   // Delete Action
@@ -114,7 +146,12 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
       })
     }
 
-    // 3. Sort
+    // 3. Status Filter
+    if (statusFilter !== 'all') {
+      result = result.filter((item) => item.status === statusFilter)
+    }
+
+    // 4. Sort
     result.sort((a, b) => {
       let aVal = sortField === 'name' ? a.name : a.created_at
       let bVal = sortField === 'name' ? b.name : b.created_at
@@ -131,7 +168,7 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
     })
 
     return result
-  }, [data, searchTerm, dateFilter, sortField, sortDirection])
+  }, [data, searchTerm, dateFilter, statusFilter, sortField, sortDirection])
 
   // Pagination Logic
   const totalPages = Math.ceil(processedData.length / itemsPerPage)
@@ -143,11 +180,11 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
   // Reset pagination on filter search changes
   useMemo(() => {
     setCurrentPage(1)
-  }, [searchTerm, dateFilter])
+  }, [searchTerm, dateFilter, statusFilter])
 
   // Export to CSV
   const handleExportCSV = () => {
-    const headers = ['Name', 'Company', 'Email', 'Phone', 'Address', 'Message', 'Date']
+    const headers = ['Name', 'Company', 'Email', 'Phone', 'Address', 'Message', 'Status', 'Date']
     const rows = processedData.map((item) => [
       item.name,
       item.company_name || 'Individual',
@@ -155,6 +192,7 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
       item.phone,
       item.address || 'Not Provided',
       item.message.replace(/"/g, '""'),
+      item.status,
       format(new Date(item.created_at), 'yyyy-MM-dd HH:mm:ss'),
     ])
 
@@ -175,15 +213,6 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
     toast.success('CSV export initiated')
   }
 
-  const toggleSort = (field: 'created_at' | 'name') => {
-    if (sortField === field) {
-      setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))
-    } else {
-      setSortField(field)
-      setSortDirection('desc')
-    }
-  }
-
   return (
     <div className="space-y-6">
       {/* Controls Bar */}
@@ -201,6 +230,26 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
 
         {/* Filters and CSV Export */}
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+          {/* Status Filter */}
+          <Select
+            value={statusFilter}
+            onValueChange={(val) => {
+              if (val) setStatusFilter(val as StatusFilter)
+            }}
+          >
+            <SelectTrigger className="w-[140px] h-10 rounded-xl border-gray-200">
+              <Filter className="h-4 w-4 mr-2 text-gray-400" />
+              <SelectValue placeholder="Status" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl">
+              <SelectItem value="all">All Statuses</SelectItem>
+              <SelectItem value="pending">Pending</SelectItem>
+              <SelectItem value="accepted">Accepted</SelectItem>
+              <SelectItem value="completed">Completed</SelectItem>
+              <SelectItem value="cancelled">Cancelled</SelectItem>
+            </SelectContent>
+          </Select>
+
           {/* Date Filter */}
           <Select
             value={dateFilter}
@@ -260,8 +309,8 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
               <TableRow>
                 <TableHead className="font-semibold text-gray-600">Client</TableHead>
                 <TableHead className="font-semibold text-gray-600">Contact</TableHead>
-                <TableHead className="font-semibold text-gray-600">Address</TableHead>
-                <TableHead className="font-semibold text-gray-600">Message Preview</TableHead>
+                <TableHead className="font-semibold text-gray-600">Address & Message</TableHead>
+                <TableHead className="font-semibold text-gray-600">Status</TableHead>
                 <TableHead className="font-semibold text-gray-600">Date</TableHead>
                 <TableHead className="font-semibold text-gray-600 text-right">Actions</TableHead>
               </TableRow>
@@ -312,24 +361,42 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
                       </div>
                     </TableCell>
 
-                    {/* Address */}
-                    <TableCell className="max-w-[200px] truncate text-gray-600">
-                      {item.address || <span className="text-gray-400 italic">Not Provided</span>}
+                    {/* Address & Message */}
+                    <TableCell>
+                      <div className="max-w-[220px] truncate text-xs text-gray-400">
+                        {item.address || 'No Address'}
+                      </div>
+                      <div className="max-w-[260px] truncate text-sm text-gray-700 font-medium">
+                        {item.message}
+                      </div>
                     </TableCell>
 
-                    {/* Message Preview */}
-                    <TableCell className="max-w-[250px] truncate text-gray-600">
-                      {item.message}
+                    {/* Status Badge */}
+                    <TableCell>
+                      <Badge className={`capitalize border font-semibold px-2 py-0.5 rounded-full text-xs ${statusColors[item.status] || ''}`}>
+                        {item.status}
+                      </Badge>
                     </TableCell>
 
                     {/* Date */}
-                    <TableCell className="text-gray-500 text-sm">
+                    <TableCell className="text-gray-500 text-xs">
                       {format(new Date(item.created_at), 'MMM d, yyyy h:mm a')}
                     </TableCell>
 
                     {/* Actions */}
                     <TableCell className="text-right">
                       <div className="flex items-center justify-end gap-1.5">
+                        {item.status === 'pending' && (
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8 text-blue-600 hover:bg-blue-50"
+                            onClick={() => handleQuickAccept(item.id)}
+                            title="Accept Enquiry"
+                          >
+                            <CheckSquare className="h-4 w-4" />
+                          </Button>
+                        )}
                         <Button
                           variant="ghost"
                           size="icon"
@@ -338,6 +405,7 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
                             setSelectedEnquiry(item)
                             setIsModalOpen(true)
                           }}
+                          title="View Details / Edit"
                         >
                           <Eye className="h-4.5 w-4.5" />
                         </Button>
@@ -346,6 +414,7 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
                           size="icon"
                           className="h-8 w-8 text-gray-400 hover:text-red-500"
                           onClick={() => handleDelete(item.id)}
+                          title="Delete Enquiry"
                         >
                           <Trash2 className="h-4.5 w-4.5" />
                         </Button>
@@ -407,6 +476,7 @@ export default function EnquiriesTable({ initialData }: EnquiriesTableProps) {
           setIsModalOpen(false)
           setSelectedEnquiry(null)
         }}
+        onUpdate={handleUpdate}
       />
     </div>
   )

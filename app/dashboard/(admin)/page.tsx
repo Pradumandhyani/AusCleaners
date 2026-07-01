@@ -1,8 +1,7 @@
 import { getDashboardStats } from '@/actions/contact'
 import StatsCard from '@/components/dashboard/StatsCard'
-import { Inbox, Calendar, BarChart3, ChevronRight, ArrowRight } from 'lucide-react'
+import { Inbox, Calendar, BarChart3, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 
 export const revalidate = 0 // Disable caching
 

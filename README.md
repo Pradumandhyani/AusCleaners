@@ -55,8 +55,12 @@ CREATE POLICY "Allow auth delete" ON contact_enquiries
   FOR DELETE TO authenticated USING (true);
 ```
 
-### 4. Create an Admin User in Supabase
-Go to **Authentication > Users** in the Supabase Dashboard, click **Add User**, select **Create User**, and enter the email and password you want to use to log into the Admin Dashboard.
+### 4. Create Admin User & Populate Seed Data
+Instead of creating users manually, you can open your Supabase SQL Editor and run the contents of [seed.sql](file:///d:/myProjects/cleanerProject/sparkle-clean-pro/supabase/seed.sql). This will:
+- Set up an admin account:
+  - **Email**: `admin@sparkleclean.com.au`
+  - **Password**: `Password123!`
+- Insert 9 realistic dummy enquiries spread over different dates for analytics testing.
 
 ### 5. Setup Environment Variables
 Create a file named `.env.local` in the root of the project and populate it with your Supabase credentials:

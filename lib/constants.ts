@@ -103,25 +103,25 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
     name: 'Sarah Mitchell',
-    role: 'Homeowner, Melbourne',
+    role: 'Homeowner, Brisbane',
     content:
-      'SparkleClean Pro transformed my home! The team was punctual, professional, and incredibly thorough. My house has never looked this clean. I\'ve been using them monthly for 2 years now.',
+      'Auswide Cleaning transformed my home! The team was punctual, professional, and incredibly thorough. My house has never looked this clean. I\'ve been using them monthly for 2 years now.',
     rating: 5,
   },
   {
     id: '2',
     name: 'James Thornton',
-    role: 'Office Manager, Sydney CBD',
+    role: 'Office Manager, Brisbane CBD',
     content:
-      'We switched our office cleaning to SparkleClean Pro 18 months ago and the difference is night and day. Our staff love coming to work in a clean, fresh environment. Highly recommend!',
+      'We switched our office cleaning to Auswide Cleaning 18 months ago and the difference is night and day. Our staff love coming to work in a clean, fresh environment. Highly recommend!',
     rating: 5,
   },
   {
     id: '3',
     name: 'Emma Rodriguez',
-    role: 'Property Manager',
+    role: 'Property Manager, Brisbane',
     content:
-      'I manage 12 rental properties and SparkleClean Pro handles all my end-of-lease cleans. They\'ve saved me so many headaches with tenants and the bond-back guarantee is a lifesaver.',
+      'I manage 12 rental properties and Auswide Cleaning handles all my end-of-lease cleans. They\'ve saved me so many headaches with tenants and the bond-back guarantee is a lifesaver.',
     rating: 5,
   },
   {
@@ -129,23 +129,23 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'David Chen',
     role: 'Restaurant Owner, Brisbane',
     content:
-      'Running a restaurant means cleanliness is non-negotiable. SparkleClean Pro\'s commercial team is reliable, detail-oriented, and always available when I need them. Outstanding service!',
+      'Running a restaurant means cleanliness is non-negotiable. Auswide Cleaning\'s commercial team is reliable, detail-oriented, and always available when I need them. Outstanding service!',
     rating: 5,
   },
   {
     id: '5',
     name: 'Lisa Kowalski',
-    role: 'Busy Parent, Perth',
+    role: 'Busy Parent, Brisbane',
     content:
-      'As a mum of three with a full-time job, SparkleClean Pro is an absolute lifesaver. They\'re trustworthy, flexible, and the results are consistently amazing. Worth every penny!',
+      'As a mum of three with a full-time job, Auswide Cleaning is an absolute lifesaver. They\'re trustworthy, flexible, and the results are consistently amazing. Worth every penny!',
     rating: 5,
   },
   {
     id: '6',
     name: 'Mark O\'Brien',
-    role: 'Real Estate Agent',
+    role: 'Real Estate Agent, Brisbane',
     content:
-      'I refer SparkleClean Pro to all my landlord clients. Their end-of-lease cleans are the best in the business — properties always look presentation-ready and bonds are returned without dispute.',
+      'I refer Auswide Cleaning to all my landlord clients. Their end-of-lease cleans are the best in the business — properties always look presentation-ready and bonds are returned without dispute.',
     rating: 5,
   },
 ]
@@ -214,11 +214,11 @@ export const FAQS: FAQItem[] = [
 ]
 
 export const COMPANY = {
-  name: 'SparkleClean Pro',
+  name: 'Auswide Cleaning',
   tagline: 'Your Trusted Cleaning Experts',
-  phone: '+61 2 8000 0000',
-  email: 'info@sparklecleanpro.com.au',
-  address: '123 Collins Street, Melbourne VIC 3000',
+  phone: '+61 452 419 301',
+  email: 'auswide71@gmail.com',
+  address: 'Brisbane, QLD 4000',
   hours: 'Mon–Sat: 7am – 7pm',
   abn: '12 345 678 901',
   social: {

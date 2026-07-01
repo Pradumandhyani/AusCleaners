@@ -20,13 +20,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'SparkleClean Pro | Professional Cleaning Services Melbourne',
-    template: '%s | SparkleClean Pro',
+    default: 'Auswide Cleaning | Professional Cleaning Services Brisbane',
+    template: '%s | Auswide Cleaning',
   },
   description:
-    'SparkleClean Pro offers professional residential, commercial, office, end-of-lease, carpet, and deep cleaning services in Melbourne. Fully insured, police-checked cleaners. Free quotes.',
+    'Auswide Cleaning offers professional residential, commercial, office, end-of-lease, carpet, and deep cleaning services in Brisbane. Fully insured, police-checked cleaners. Free quotes.',
   keywords: [
-    'cleaning services Melbourne',
+    'cleaning services Brisbane',
     'residential cleaning',
     'commercial cleaning',
     'office cleaning',
@@ -35,29 +35,29 @@ export const metadata: Metadata = {
     'deep cleaning',
     'professional cleaners',
   ],
-  authors: [{ name: 'SparkleClean Pro' }],
-  creator: 'SparkleClean Pro',
+  authors: [{ name: 'Auswide Cleaning' }],
+  creator: 'Auswide Cleaning',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
     url: '/',
-    siteName: 'SparkleClean Pro',
-    title: 'SparkleClean Pro | Professional Cleaning Services Melbourne',
+    siteName: 'Auswide Cleaning',
+    title: 'Auswide Cleaning | Professional Cleaning Services Brisbane',
     description:
-      'Premium professional cleaning services for homes, offices, and commercial spaces in Melbourne. Trusted, insured, and guaranteed.',
+      'Premium professional cleaning services for homes, offices, and commercial spaces in Brisbane. Trusted, insured, and guaranteed.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'SparkleClean Pro - Professional Cleaning Services',
+        alt: 'Auswide Cleaning - Professional Cleaning Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SparkleClean Pro | Professional Cleaning Services',
-    description: 'Premium professional cleaning services in Melbourne.',
+    title: 'Auswide Cleaning | Professional Cleaning Services',
+    description: 'Premium professional cleaning services in Brisbane.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -80,25 +80,25 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://sparklecleanpro.com.au',
-  name: 'SparkleClean Pro',
+  '@id': 'https://auswidecleaning.com.au',
+  name: 'Auswide Cleaning',
   description:
-    'Professional cleaning services for residential, commercial, office, end-of-lease, carpet, and deep cleaning in Melbourne.',
-  url: 'https://sparklecleanpro.com.au',
-  telephone: '+61280000000',
-  email: 'info@sparklecleanpro.com.au',
+    'Professional cleaning services for residential, commercial, office, end-of-lease, carpet, and deep cleaning in Brisbane.',
+  url: 'https://auswidecleaning.com.au',
+  telephone: '+61452419301',
+  email: 'auswide71@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '123 Collins Street',
-    addressLocality: 'Melbourne',
-    addressRegion: 'VIC',
-    postalCode: '3000',
+    streetAddress: 'Brisbane',
+    addressLocality: 'Brisbane',
+    addressRegion: 'QLD',
+    postalCode: '4000',
     addressCountry: 'AU',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -37.8136,
-    longitude: 144.9631,
+    latitude: -27.4698,
+    longitude: 153.0251,
   },
   openingHoursSpecification: [
     {
@@ -111,14 +111,14 @@ const jsonLd = {
   priceRange: '$$',
   areaServed: {
     '@type': 'City',
-    name: 'Melbourne',
+    name: 'Brisbane',
   },
-  hasMap: 'https://maps.google.com/?q=123+Collins+Street+Melbourne',
-  image: 'https://sparklecleanpro.com.au/og-image.jpg',
+  hasMap: 'https://maps.google.com/?q=Brisbane+QLD',
+  image: 'https://auswidecleaning.com.au/og-image.jpg',
   sameAs: [
-    'https://facebook.com/sparklecleanpro',
-    'https://instagram.com/sparklecleanpro',
-    'https://linkedin.com/company/sparklecleanpro',
+    'https://facebook.com/auswidecleaning',
+    'https://instagram.com/auswidecleaning',
+    'https://linkedin.com/company/auswidecleaning',
   ],
   aggregateRating: {
     '@type': 'AggregateRating',

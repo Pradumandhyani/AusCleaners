@@ -111,3 +111,39 @@ export async function getDashboardStats() {
     thisMonth: monthResult.count ?? 0,
   }
 }
+
+export async function updateEnquiryStatus(
+  id: string,
+  status: 'pending' | 'accepted' | 'completed' | 'cancelled'
+): Promise<ActionResponse> {
+  const supabase = await createClient()
+
+  const { error } = await supabase
+    .from('contact_enquiries')
+    .update({ status })
+    .eq('id', id)
+
+  if (error) {
+    return { success: false, message: 'Failed to update status', error: error.message }
+  }
+
+  return { success: true, message: `Enquiry marked as ${status}` }
+}
+
+export async function updateEnquiry(
+  id: string,
+  data: Partial<ContactFormData>
+): Promise<ActionResponse> {
+  const supabase = await createClient()
+
+  const { error } = await supabase
+    .from('contact_enquiries')
+    .update(data)
+    .eq('id', id)
+
+  if (error) {
+    return { success: false, message: 'Failed to update enquiry details', error: error.message }
+  }
+
+  return { success: true, message: 'Enquiry updated successfully' }
+}

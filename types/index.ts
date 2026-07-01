@@ -17,6 +17,7 @@ export interface Enquiry {
   phone: string
   address: string | null
   message: string
+  status: 'pending' | 'accepted' | 'completed' | 'cancelled'
   created_at: string
 }
 

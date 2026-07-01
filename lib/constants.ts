@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
       'Window sills & skirting boards',
       'Flexible scheduling',
     ],
-    price: 'From $120',
+    price: ' ',
   },
   {
     id: 'commercial',
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
       'Waste management',
       'Eco-friendly products',
     ],
-    price: 'From $200',
+    price: '  ',
   },
   {
     id: 'office',
@@ -47,7 +47,7 @@ export const SERVICES: Service[] = [
       'Reception areas',
       'Daily or weekly service',
     ],
-    price: 'From $150',
+    price: '  ',
   },
   {
     id: 'end-of-lease',
@@ -63,7 +63,7 @@ export const SERVICES: Service[] = [
       'Bond back guarantee',
       'Same-day service available',
     ],
-    price: 'From $280',
+    price: '  ',
   },
   {
     id: 'carpet',
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
       'Rugs & upholstery',
       'Quick dry time',
     ],
-    price: 'From $80/room',
+    price: '  /room',
   },
   {
     id: 'deep-cleaning',
@@ -95,7 +95,7 @@ export const SERVICES: Service[] = [
       'Behind & under furniture',
       'Full sanitisation',
     ],
-    price: 'From $350',
+    price: '  ',
   },
 ]
 
@@ -216,7 +216,7 @@ export const FAQS: FAQItem[] = [
 export const COMPANY = {
   name: 'Auswide Cleaning',
   tagline: 'Your Trusted Cleaning Experts',
-  phone: '+61 452 419 301',
+  phone: '+61436969438',
   email: 'auswide71@gmail.com',
   address: 'Brisbane',
   hours: 'Mon–Sat: 7am – 7pm',

@@ -85,7 +85,7 @@ const jsonLd = {
   description:
     'Professional cleaning services for residential, commercial, office, end-of-lease, carpet, and deep cleaning in Brisbane.',
   url: 'https://auswidecleaning.com.au',
-  telephone: '+61452419301',
+  telephone: '+61436969438',
   email: 'auswide71@gmail.com',
   address: {
     '@type': 'PostalAddress',
@@ -103,7 +103,7 @@ const jsonLd = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      dayOfWeek: ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '07:00',
       closes: '19:00',
     },

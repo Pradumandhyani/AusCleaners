@@ -45,7 +45,7 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2014', event: 'Founded in Melbourne with a team of 3' },
+  { year: '2014', event: 'Founded in Brisbane with a team of 3' },
   { year: '2016', event: 'Expanded to commercial cleaning services' },
   { year: '2018', event: 'Reached 1,000 happy clients milestone' },
   { year: '2020', event: 'Launched eco-friendly cleaning range' },
@@ -67,7 +67,7 @@ export default function AboutClient() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium mb-6"
           >
-            About Auswide cleaning
+            About Auswide Cleaning
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function AboutClient() {
             className="text-4xl sm:text-5xl font-bold text-white mb-6"
             style={{ fontFamily: 'var(--font-plus-jakarta)' }}
           >
-            Melbourne&apos;s Most{' '}
+            Brisbane&apos;s Most{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-green-300">
               Trusted Cleaners
             </span>
@@ -87,7 +87,7 @@ export default function AboutClient() {
             transition={{ delay: 0.2 }}
             className="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto"
           >
-            For over 10 years, Auswide cleaning has been helping Melbourne families and businesses
+            For over 10 years, Auswide Cleaning has been helping Brisbane families and businesses
             maintain beautiful, healthy spaces. Our story is one of passion, dedication, and an
             unwavering commitment to exceptional service.
           </motion.p>
@@ -117,17 +117,17 @@ export default function AboutClient() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Auswide cleaning was founded in 2014 by Michael and Sarah Chen, a couple who
+                  Auswide Cleaning was founded in 2014 by Michael and Sarah Chen, a couple who
                   believed that professional cleaning should be accessible, reliable, and genuinely
                   excellent — not a luxury.
                 </p>
                 <p>
                   Starting with just a small team of three dedicated cleaners and a single van, we
                   built our reputation one spotlessly clean home at a time. Word spread quickly
-                  that Auswide cleaning wasn&apos;t just another cleaning company — we were different.
+                  that Auswide Cleaning wasn&apos;t just another cleaning company — we were different.
                 </p>
                 <p>
-                  Today, we&apos;re proud to have served over 5,000 satisfied clients across Melbourne
+                  Today, we&apos;re proud to have served over 5,000 satisfied clients across Brisbane
                   and its surrounding suburbs, with a team of 50+ professionally trained cleaners
                   who share our passion for quality and service.
                 </p>
@@ -238,7 +238,7 @@ export default function AboutClient() {
               Ready to Experience the Difference?
             </h2>
             <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of happy clients and discover why Auswide cleaning is Melbourne&apos;s most trusted cleaning company.
+              Join thousands of happy clients and discover why Auswide Cleaning is Brisbane&apos;s most trusted cleaning company.
             </p>
             <Link
               href="/contact"

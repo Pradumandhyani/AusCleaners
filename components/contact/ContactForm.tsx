@@ -54,7 +54,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-3">Enquiry Sent!</h3>
         <p className="text-gray-600 max-w-md">
-          Thank you for contacting Auswide cleaning. We&apos;ll get back to you within 2 hours during business hours.
+          Thank you for contacting Auswide Cleaning. We&apos;ll get back to you within 2 hours during business hours.
         </p>
       </motion.div>
     )
@@ -140,7 +140,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
         </Label>
         <Input
           id="address"
-          placeholder="123 Example Street, Melbourne VIC 3000"
+          placeholder="123 Example Street, Brisbane QLD 4000"
           {...register('address')}
           className="h-11 rounded-xl border-gray-200 focus:border-[#1E88E5]"
         />

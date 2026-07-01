@@ -33,7 +33,7 @@ export default function CTABanner() {
               Ready for a Cleaner Home?
             </h2>
             <p className="text-blue-100 text-lg max-w-xl mx-auto mb-10">
-              Join 5,000+ happy customers who trust Auswide cleaning. Get your free, no-obligation
+              Join 5,000+ happy customers who trust Auswide Cleaning. Get your free, no-obligation
               quote today.
             </p>
 

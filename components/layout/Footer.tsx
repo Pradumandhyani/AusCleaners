@@ -35,11 +35,11 @@ export default function Footer() {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <span className="font-bold text-white text-lg">
-                SparkleClean<span className="text-[#42A5F5]"> Pro</span>
+                Auswide<span className="text-[#42A5F5]"> Cleaning</span>
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Professional cleaning services you can trust. Serving Melbourne and surrounds with 
+              Professional cleaning services you can trust. Serving Brisbane and surrounds with 
               pride for over 10 years. Your satisfaction is our guarantee.
             </p>
             {/* Social */}
@@ -139,7 +139,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
-          <p>© {currentYear} Auswide cleaning. All rights reserved.</p>
+          <p>© {currentYear} Auswide Cleaning. All rights reserved.</p>
           <div className="flex gap-6">
             <span>ABN: {COMPANY.abn}</span>
             <Link href="/privacy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>

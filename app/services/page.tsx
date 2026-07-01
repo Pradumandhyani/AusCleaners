@@ -4,7 +4,7 @@ import ServicesClient from './ServicesClient'
 export const metadata: Metadata = {
   title: 'Our Services',
   description:
-    'Professional cleaning services: residential, commercial, office, end-of-lease, carpet & deep cleaning. Fully insured Melbourne cleaners with free quotes.',
+    'Professional cleaning services: residential, commercial, office, end-of-lease, carpet & deep cleaning. Fully insured Brisbane cleaners with free quotes.',
   alternates: { canonical: '/services' },
 }
 

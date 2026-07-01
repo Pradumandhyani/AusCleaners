@@ -13,7 +13,11 @@ const MENU_ITEMS = [
   { href: '/dashboard/enquiries', label: 'Enquiries', icon: Inbox },
 ]
 
-export default function DashboardSidebar() {
+interface DashboardSidebarProps {
+  onClose?: () => void
+}
+
+export default function DashboardSidebar({ onClose }: DashboardSidebarProps) {
   const pathname = usePathname()
   const router = useRouter()
   const supabase = createClient()
@@ -27,19 +31,34 @@ export default function DashboardSidebar() {
     toast.success('Logged out successfully')
     router.push('/')
     router.refresh()
+    if (onClose) onClose()
   }
 
   return (
     <aside className="w-64 bg-slate-900 text-slate-300 flex flex-col h-full border-r border-slate-800">
       {/* Sidebar Header */}
-      <div className="h-16 flex items-center gap-2 px-6 border-b border-slate-800 shrink-0">
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center">
-          <Sparkles className="h-4.5 w-4.5 text-white" />
+      <div className="h-16 flex items-center justify-between px-6 border-b border-slate-800 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center">
+            <Sparkles className="h-4.5 w-4.5 text-white" />
+          </div>
+          <div>
+            <span className="font-bold text-white text-sm block">Auswide</span>
+            <span className="text-xs text-slate-400 block -mt-1">Admin Portal</span>
+          </div>
         </div>
-        <div>
-          <span className="font-bold text-white text-sm block">SparkleClean</span>
-          <span className="text-xs text-slate-400 block -mt-1">Admin Portal</span>
-        </div>
+        {/* Close Button on Mobile */}
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            aria-label="Close sidebar"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
 
       {/* Navigation */}
@@ -52,6 +71,7 @@ export default function DashboardSidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onClose}
               className={cn(
                 'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200',
                 isActive

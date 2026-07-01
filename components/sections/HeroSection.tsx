@@ -59,7 +59,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Serving Melbourne & Surrounds
+              Serving Brisbane & Surrounds
             </motion.div>
 
             {/* Headline */}

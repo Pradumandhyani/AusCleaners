@@ -50,7 +50,7 @@ export default function Testimonials() {
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
             Don&apos;t take our word for it — hear from the hundreds of happy customers who trust
-            Auswide cleaning.
+            Auswide Cleaning.
           </p>
 
           {/* Overall rating */}

@@ -5,7 +5,7 @@ import AboutClient from './AboutClient'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Auswide cleaning — Melbourne\'s trusted professional cleaning company. Our story, values, team, and commitment to quality.',
+    'Learn about Auswide Cleaning — Brisbane\'s trusted professional cleaning company. Our story, values, team, and commitment to quality.',
   alternates: { canonical: '/about' },
 }
 

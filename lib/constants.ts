@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
       'Rugs & upholstery',
       'Quick dry time',
     ],
-    price: '  /room',
+    price: '   ',
   },
   {
     id: 'deep-cleaning',

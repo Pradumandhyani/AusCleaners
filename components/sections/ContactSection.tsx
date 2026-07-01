@@ -49,7 +49,7 @@ export default function ContactSection() {
                 icon: '📞',
                 title: 'Call Us',
                 value: COMPANY.phone,
-                sub: 'Mon–Sat, 7am–7pm',
+                sub: 'Mon–Sun, 7am–7pm',
                 href: `tel:${COMPANY.phone}`,
               },
               {

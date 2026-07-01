@@ -219,7 +219,7 @@ export const COMPANY = {
   phone: '+61436969438',
   email: 'auswide71@gmail.com',
   address: 'Brisbane',
-  hours: 'Mon–Sat: 7am – 7pm',
+  hours: 'Mon–Sun: 7am – 7pm',
   abn: '12 345 678 901',
   social: {
     facebook: 'https://facebook.com',

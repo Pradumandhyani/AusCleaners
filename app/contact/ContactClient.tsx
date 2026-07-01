@@ -10,7 +10,7 @@ const contactInfo = [
     icon: Phone,
     label: 'Phone',
     value: COMPANY.phone,
-    sub: 'Mon–Sat, 7am–7pm',
+    sub: 'Mon–Sun, 7am–7pm',
     href: `tel:${COMPANY.phone}`,
     gradient: 'from-blue-500 to-blue-600',
   },

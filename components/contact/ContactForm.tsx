@@ -149,7 +149,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
       {/* Message */}
       <div className="space-y-1.5">
         <Label htmlFor="message" className="text-sm font-medium text-gray-700">
-          Message / Service Required <span className="text-red-500">*</span>
+          Message / Service Required <span className="text-gray-400 text-xs font-normal">(optional)</span>
         </Label>
         <Textarea
           id="message"

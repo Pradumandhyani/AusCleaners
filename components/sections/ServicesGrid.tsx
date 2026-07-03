@@ -121,7 +121,7 @@ export default function ServicesGrid() {
 
                 {/* CTA */}
                 <Link
-                  href="/contact"
+                  href="/contact#enquiry-form"
                   className="group/link inline-flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-semibold text-[#1E88E5] hover:gap-2.5 transition-all duration-200 mt-auto"
                 >
                   Get a Quote

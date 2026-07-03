@@ -126,7 +126,7 @@ export default function GalleryClient() {
           <div className="mt-16 text-center">
             <p className="text-gray-500 mb-5">Ready to see results like these at your property?</p>
             <Link
-              href="/contact"
+              href="/contact#enquiry-form"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-bold shadow-xl shadow-blue-200 hover:scale-105 transition-all duration-300"
             >
               Book Your Clean <ArrowRight className="h-5 w-5" />

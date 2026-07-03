@@ -241,7 +241,7 @@ export default function AboutClient() {
               Join thousands of happy clients and discover why Auswide Cleaning is Brisbane&apos;s most trusted cleaning company.
             </p>
             <Link
-              href="/contact"
+              href="/contact#enquiry-form"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-bold text-lg shadow-xl shadow-blue-200 hover:scale-105 transition-all duration-300"
             >
               Get Your Free Quote <ArrowRight className="h-5 w-5" />

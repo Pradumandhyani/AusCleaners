@@ -5,7 +5,7 @@ export interface ContactFormData {
   email: string
   phone: string
   address?: string
-  message: string
+  message?: string
 }
 
 // Enquiry from Supabase

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS contact_enquiries (
   email TEXT NOT NULL,
   phone TEXT NOT NULL,
   address TEXT,
-  message TEXT NOT NULL,
+  message TEXT,
   status TEXT DEFAULT 'pending' NOT NULL, -- pending, accepted, completed, cancelled
   created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );

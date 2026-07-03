@@ -106,7 +106,7 @@ export default function ContactClient() {
       </section>
 
       {/* Main form section */}
-      <section className="section-padding bg-gray-50">
+      <section id="enquiry-form" className="section-padding bg-gray-50">
         <div className="container-max">
           <div className="max-w-2xl mx-auto">
             <motion.div

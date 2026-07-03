@@ -92,10 +92,9 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA */}
             <div className="hidden md:flex items-center gap-3">
               <Link
-                href="/contact"
+                href="/contact#enquiry-form"
                 className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white text-sm font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:scale-105 transition-all duration-300"
               >
                 Get Free Quote
@@ -146,7 +145,7 @@ export default function Navbar() {
                 ))}
                 <div className="pt-2 pb-1">
                   <Link
-                    href="/contact"
+                    href="/contact#enquiry-form"
                     className="flex items-center justify-center w-full px-4 py-3 rounded-xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white text-sm font-semibold shadow-lg"
                   >
                     Get Free Quote

@@ -1,8 +1,9 @@
 'use server'
 
-import { createClient } from '@/supabase/server'
+import { createClient, createAdminClient } from '@/supabase/server'
 import { contactFormSchema } from '@/lib/validations'
 import { ActionResponse, ContactFormData } from '@/types'
+import { sendEmailNotification, sendWhatsAppNotification } from '@/lib/notifications'
 
 export async function submitContactForm(
   data: ContactFormData
@@ -19,7 +20,8 @@ export async function submitContactForm(
       }
     }
 
-    const supabase = await createClient()
+    // Use admin client to bypass RLS for public form submissions
+    const supabase = createAdminClient()
 
     const { error } = await supabase.from('contact_enquiries').insert([
       {
@@ -28,7 +30,7 @@ export async function submitContactForm(
         email: validated.data.email,
         phone: validated.data.phone,
         address: validated.data.address || null,
-        message: validated.data.message,
+        message: validated.data.message || '',
       },
     ])
 
@@ -40,6 +42,12 @@ export async function submitContactForm(
         error: 'Database error. Please try again.',
       }
     }
+
+    // Fire notifications in parallel — errors here don't fail the user submission
+    await Promise.allSettled([
+      sendEmailNotification(validated.data),
+      sendWhatsAppNotification(validated.data),
+    ])
 
     return {
       success: true,

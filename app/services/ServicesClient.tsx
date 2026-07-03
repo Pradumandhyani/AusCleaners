@@ -104,7 +104,7 @@ export default function ServicesClient() {
 
                   <div className="flex gap-4">
                     <Link
-                      href="/contact"
+                      href="/contact#enquiry-form"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition-all duration-300"
                     >
                       Get Quote <ArrowRight className="h-4 w-4" />
@@ -148,7 +148,7 @@ export default function ServicesClient() {
           <p className="text-gray-500 text-lg mb-8">
             Contact us and we&apos;ll recommend the perfect cleaning solution for your specific needs.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-bold text-lg shadow-xl shadow-blue-200 hover:scale-105 transition-all duration-300">
+          <Link href="/contact#enquiry-form" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-bold text-lg shadow-xl shadow-blue-200 hover:scale-105 transition-all duration-300">
             Get Free Consultation <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

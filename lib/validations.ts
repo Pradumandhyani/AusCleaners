@@ -14,14 +14,14 @@ export const contactFormSchema = z.object({
     .string()
     .min(1, 'Phone number is required')
     .regex(
-      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+      /^\+?[\d\s\-().]{4,20}$/,
       'Please enter a valid phone number'
     ),
   address: z.string().max(200, 'Address must be less than 200 characters').optional(),
   message: z
     .string()
-    .min(10, 'Message must be at least 10 characters')
-    .max(2000, 'Message must be less than 2000 characters'),
+    .max(2000, 'Message must be less than 2000 characters')
+    .optional(),
 })
 
 export type ContactFormSchema = z.infer<typeof contactFormSchema>

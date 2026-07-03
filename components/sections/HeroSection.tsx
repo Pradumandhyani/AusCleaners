@@ -96,7 +96,7 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10"
             >
               <Link
-                href="/contact"
+                href="/contact#enquiry-form"
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-white text-[#1E88E5] font-bold text-base sm:text-lg shadow-2xl hover:shadow-white/30 hover:scale-105 transition-all duration-300"
               >
                 Get Free Quote

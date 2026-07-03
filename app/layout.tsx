@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const inter = Inter({
@@ -147,6 +148,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster position="top-right" richColors />
+        <GoogleAnalytics gaId="G-4XFKWNM78E" />
       </body>
     </html>
   )

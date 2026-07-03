@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#1E88E5] text-sm font-semibold mb-4">
             Why Choose Us
@@ -102,13 +102,13 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={item}
-              className="group relative p-7 rounded-2xl border border-gray-100 hover:border-transparent card-shadow hover:card-shadow-hover transition-all duration-300 cursor-default overflow-hidden"
+              className="group relative p-4 sm:p-7 rounded-xl sm:rounded-2xl border border-gray-100 hover:border-transparent card-shadow hover:card-shadow-hover transition-all duration-300 cursor-default overflow-hidden"
             >
               {/* Background on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -116,17 +116,17 @@ export default function WhyChooseUs() {
               <div className="relative">
                 {/* Icon */}
                 <div
-                  className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl ${feature.bg} flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <div
-                    className={`w-6 h-6 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center`}
+                    className={`w-5 h-5 sm:w-6 sm:h-6 rounded-md sm:rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center`}
                   >
-                    <feature.icon className="h-3.5 w-3.5 text-white" />
+                    <feature.icon className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-white" />
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1.5 sm:mb-2 leading-snug">{feature.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed hidden sm:block">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -138,7 +138,7 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 py-10 px-8 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] shadow-xl shadow-blue-200"
+          className="mt-10 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 py-7 sm:py-10 px-4 sm:px-8 rounded-2xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] shadow-xl shadow-blue-200"
         >
           {[
             { value: '5,000+', label: 'Happy Clients' },

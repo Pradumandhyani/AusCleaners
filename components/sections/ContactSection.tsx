@@ -15,7 +15,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-green-50 text-[#43A047] text-sm font-semibold mb-4">
             Get In Touch
@@ -34,7 +34,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10">
           {/* Contact info column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -110,7 +110,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 bg-white rounded-2xl p-8 border border-gray-100 card-shadow"
+            className="lg:col-span-3 bg-white rounded-2xl p-5 sm:p-8 border border-gray-100 card-shadow"
           >
             <h3 className="text-xl font-bold text-gray-900 mb-6">Send Us an Enquiry</h3>
             <ContactForm />

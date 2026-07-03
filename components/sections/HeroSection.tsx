@@ -16,7 +16,7 @@ const badges = [
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-[92vh] flex items-center overflow-hidden"
+      className="relative min-h-[100svh] sm:min-h-[92vh] flex items-center overflow-hidden"
       aria-label="Hero section"
     >
       {/* Background gradient */}
@@ -47,8 +47,8 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
           <div>
             {/* Badge */}
@@ -56,7 +56,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               Serving Brisbane & Surrounds
@@ -67,7 +67,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6"
               style={{ fontFamily: 'var(--font-plus-jakarta)' }}
             >
               Your Home,{' '}
@@ -82,7 +82,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-blue-100 leading-relaxed mb-8 max-w-lg"
+              className="text-base sm:text-lg text-blue-100 leading-relaxed mb-6 sm:mb-8 max-w-lg"
             >
               Professional, trusted cleaning services for homes, offices, and commercial spaces.
               Fully insured, police-checked cleaners with a 100% satisfaction guarantee.
@@ -93,18 +93,18 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 mb-10"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10"
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-[#1E88E5] font-bold text-lg shadow-2xl hover:shadow-white/30 hover:scale-105 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-white text-[#1E88E5] font-bold text-base sm:text-lg shadow-2xl hover:shadow-white/30 hover:scale-105 transition-all duration-300"
               >
                 Get Free Quote
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href={`tel:${COMPANY.phone}`}
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl border-2 border-white/30 text-white font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl border-2 border-white/30 text-white font-semibold text-base sm:text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 <Phone className="h-5 w-5" />
                 Call Us Now
@@ -116,12 +116,12 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-2 sm:gap-3"
             >
               {badges.map(({ icon: Icon, text }) => (
                 <div
                   key={text}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm"
+                  className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm"
                 >
                   <Icon className="h-4 w-4 text-green-300" />
                   {text}

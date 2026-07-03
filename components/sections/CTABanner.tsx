@@ -7,14 +7,14 @@ import { COMPANY } from '@/lib/constants'
 
 export default function CTABanner() {
   return (
-    <section className="py-20 px-4" aria-label="Call to action">
+    <section className="py-12 sm:py-20 px-4" aria-label="Call to action">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl overflow-hidden gradient-hero p-12 text-center"
+          className="relative rounded-3xl overflow-hidden gradient-hero p-6 sm:p-12 text-center"
         >
           {/* Decorative orbs */}
           <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-blue-400/20 blur-3xl -translate-x-1/2 -translate-y-1/2" />
@@ -27,12 +27,12 @@ export default function CTABanner() {
             </span>
 
             <h2
-              className="text-3xl sm:text-5xl font-bold text-white mb-4"
+              className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
               style={{ fontFamily: 'var(--font-plus-jakarta)' }}
             >
               Ready for a Cleaner Home?
             </h2>
-            <p className="text-blue-100 text-lg max-w-xl mx-auto mb-10">
+            <p className="text-blue-100 text-base sm:text-lg max-w-xl mx-auto mb-8 sm:mb-10">
               Join 5,000+ happy customers who trust Auswide Cleaning. Get your free, no-obligation
               quote today.
             </p>

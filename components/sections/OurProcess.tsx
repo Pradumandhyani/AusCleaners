@@ -13,7 +13,7 @@ export default function OurProcess() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#1E88E5] text-sm font-semibold mb-4">
             How It Works
@@ -37,7 +37,7 @@ export default function OurProcess() {
           {/* Connecting line desktop */}
           <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {PROCESS_STEPS.map((step, index) => (
               <motion.div
                 key={step.step}
@@ -48,17 +48,17 @@ export default function OurProcess() {
                 className="flex flex-col items-center text-center group"
               >
                 {/* Step number */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1565C0] flex items-center justify-center shadow-xl shadow-blue-200 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white font-bold text-xl">{step.step}</span>
+                <div className="relative mb-3 sm:mb-6">
+                  <div className="w-11 h-11 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1565C0] flex items-center justify-center shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-base sm:text-xl">{step.step}</span>
                   </div>
                   {index < PROCESS_STEPS.length - 1 && (
                     <ArrowRight className="hidden lg:block absolute -right-12 top-1/2 -translate-y-1/2 text-blue-200 h-5 w-5" />
                   )}
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-1 sm:mb-3 leading-snug">{step.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed hidden sm:block">{step.description}</p>
               </motion.div>
             ))}
           </div>

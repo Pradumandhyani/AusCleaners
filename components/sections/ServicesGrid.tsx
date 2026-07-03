@@ -54,7 +54,7 @@ export default function ServicesGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-green-50 text-[#43A047] text-sm font-semibold mb-4">
             Our Services
@@ -79,7 +79,7 @@ export default function ServicesGrid() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
         >
           {SERVICES.map((service, index) => {
             const Icon = iconMap[service.icon] || Sparkles
@@ -89,28 +89,28 @@ export default function ServicesGrid() {
               <motion.div
                 key={service.id}
                 variants={item}
-                className="group bg-white rounded-2xl p-7 border border-gray-100 card-shadow hover:card-shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              className="group bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-gray-100 card-shadow hover:card-shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 {/* Icon + Price */}
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start justify-between mb-3 sm:mb-6">
                   <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <Icon className="h-7 w-7 text-white" />
+                    <Icon className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
                   </div>
                   {service.price && (
-                    <span className="text-sm font-semibold text-[#1E88E5] bg-blue-50 px-3 py-1 rounded-full">
+                    <span className="text-xs sm:text-sm font-semibold text-[#1E88E5] bg-blue-50 px-2 sm:px-3 py-1 rounded-full">
                       {service.price}
                     </span>
                   )}
                 </div>
 
                 {/* Title & description */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">{service.description}</p>
+                <h3 className="text-sm sm:text-xl font-bold text-gray-900 mb-1.5 sm:mb-3 leading-snug">{service.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-5 hidden sm:block">{service.description}</p>
 
                 {/* Features list */}
-                <ul className="space-y-2 mb-6 flex-1">
+                <ul className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-6 flex-1 hidden sm:block">
                   {service.features.slice(0, 4).map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#43A047] shrink-0" />
@@ -122,10 +122,10 @@ export default function ServicesGrid() {
                 {/* CTA */}
                 <Link
                   href="/contact"
-                  className="group/link inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E88E5] hover:gap-2.5 transition-all duration-200"
+                  className="group/link inline-flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-semibold text-[#1E88E5] hover:gap-2.5 transition-all duration-200 mt-auto"
                 >
                   Get a Quote
-                  <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
             )
@@ -138,7 +138,7 @@ export default function ServicesGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-12 text-center"
+          className="mt-8 sm:mt-12 text-center"
         >
           <Link
             href="/services"

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { constructMetadata } from '@/lib/seo'
 import HeroSection from '@/components/sections/HeroSection'
 import WhyChooseUs from '@/components/sections/WhyChooseUs'
 import ServicesGrid from '@/components/sections/ServicesGrid'
@@ -8,14 +8,11 @@ import FAQPreview from '@/components/sections/FAQPreview'
 import ContactSection from '@/components/sections/ContactSection'
 import CTABanner from '@/components/sections/CTABanner'
 
-export const metadata: Metadata = {
-  title: 'Auswide Cleaning | Professional Cleaning Services Brisbane',
-  description:
-    'Brisbane\'s most trusted professional cleaning company. Residential, commercial, office, end-of-lease, carpet & deep cleaning. Fully insured, police-checked. Free quotes.',
-  alternates: {
-    canonical: '/',
-  },
-}
+export const metadata = constructMetadata({
+  title: 'Professional House & Commercial Cleaning Services | Auswide Cleaners',
+  description: 'Professional house cleaning, office cleaning, bond cleaning and commercial cleaning services across Brisbane. Get a free quote today.',
+  canonicalPath: '/',
+})
 
 export default function HomePage() {
   return (

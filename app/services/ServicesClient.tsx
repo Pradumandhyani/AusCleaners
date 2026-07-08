@@ -66,6 +66,16 @@ export default function ServicesClient() {
             const gradient = gradients[index % gradients.length]
             const isEven = index % 2 === 0
 
+            const slugMap: Record<string, string> = {
+              'residential': 'house-cleaning-brisbane',
+              'commercial': 'commercial-cleaning-brisbane',
+              'office': 'office-cleaning-brisbane',
+              'end-of-lease': 'end-of-lease-cleaning-brisbane',
+              'carpet': 'carpet-cleaning-brisbane',
+              'deep-cleaning': 'deep-cleaning-brisbane',
+            }
+            const targetSlug = slugMap[service.id] || ''
+
             return (
               <motion.div
                 key={service.id}
@@ -104,10 +114,10 @@ export default function ServicesClient() {
 
                   <div className="flex gap-4">
                     <Link
-                      href="/contact#enquiry-form"
+                      href={targetSlug ? `/services/${targetSlug}` : '/contact#enquiry-form'}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1E88E5] to-[#1565C0] text-white font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition-all duration-300"
                     >
-                      Get Quote <ArrowRight className="h-4 w-4" />
+                      View Details <ArrowRight className="h-4 w-4" />
                     </Link>
                     <a
                       href={`tel:${COMPANY.phone}`}

@@ -1,12 +1,11 @@
-import type { Metadata } from 'next'
+import { constructMetadata } from '@/lib/seo'
 import ServicesClient from './ServicesClient'
 
-export const metadata: Metadata = {
-  title: 'Our Services',
-  description:
-    'Professional cleaning services: residential, commercial, office, end-of-lease, carpet & deep cleaning. Fully insured Brisbane cleaners with free quotes.',
-  alternates: { canonical: '/services' },
-}
+export const metadata = constructMetadata({
+  title: 'Our Cleaning Services | Auswide Cleaners Brisbane',
+  description: 'Explore our range of professional cleaning services in Brisbane: residential cleans, office hygiene, end-of-lease vacate cleans, deep spring cleans, and carpet washing.',
+  canonicalPath: '/services',
+})
 
 export default function ServicesPage() {
   return <ServicesClient />

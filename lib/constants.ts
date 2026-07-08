@@ -214,17 +214,17 @@ export const FAQS: FAQItem[] = [
 ]
 
 export const COMPANY = {
-  name: 'Auswide Cleaning',
+  name: 'Auswide Cleaners',
   tagline: 'Your Trusted Cleaning Experts',
   phone: '+61436969438',
-  email: 'auswide71@gmail.com',
-  address: 'Brisbane',
+  email: 'info@auswidecleaners.com',
+  address: 'Brisbane, QLD',
   hours: 'Mon–Sun: 7am – 7pm',
   abn: '12 345 678 901',
   social: {
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com',
+    facebook: 'https://facebook.com/auswidecleaners',
+    instagram: 'https://instagram.com/auswidecleaners',
+    linkedin: 'https://linkedin.com/company/auswidecleaners',
   },
 }
 

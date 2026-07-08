@@ -1,13 +1,11 @@
-import type { Metadata } from 'next'
-import { Metadata as NextMetadata } from 'next'
+import { constructMetadata } from '@/lib/seo'
 import AboutClient from './AboutClient'
 
-export const metadata: Metadata = {
-  title: 'About Us',
-  description:
-    'Learn about Auswide Cleaning — Brisbane\'s trusted professional cleaning company. Our story, values, team, and commitment to quality.',
-  alternates: { canonical: '/about' },
-}
+export const metadata = constructMetadata({
+  title: 'About Us | Professional Cleaners Brisbane',
+  description: 'Learn about Auswide Cleaners — Brisbane’s trusted professional cleaning company. Our story, values, team, and commitment to quality.',
+  canonicalPath: '/about',
+})
 
 export default function AboutPage() {
   return <AboutClient />

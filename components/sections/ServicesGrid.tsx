@@ -73,7 +73,6 @@ export default function ServicesGrid() {
           </p>
         </motion.div>
 
-        {/* Services grid */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -84,6 +83,15 @@ export default function ServicesGrid() {
           {SERVICES.map((service, index) => {
             const Icon = iconMap[service.icon] || Sparkles
             const gradient = gradients[index % gradients.length]
+            const slugMap: Record<string, string> = {
+              'residential': 'house-cleaning-brisbane',
+              'commercial': 'commercial-cleaning-brisbane',
+              'office': 'office-cleaning-brisbane',
+              'end-of-lease': 'end-of-lease-cleaning-brisbane',
+              'carpet': 'carpet-cleaning-brisbane',
+              'deep-cleaning': 'deep-cleaning-brisbane',
+            }
+            const targetSlug = slugMap[service.id] || ''
 
             return (
               <motion.div
@@ -121,10 +129,10 @@ export default function ServicesGrid() {
 
                 {/* CTA */}
                 <Link
-                  href="/contact#enquiry-form"
+                  href={targetSlug ? `/services/${targetSlug}` : '/contact#enquiry-form'}
                   className="group/link inline-flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-semibold text-[#1E88E5] hover:gap-2.5 transition-all duration-200 mt-auto"
                 >
-                  Get a Quote
+                  Learn More
                   <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>

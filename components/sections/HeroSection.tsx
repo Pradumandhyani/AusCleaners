@@ -142,9 +142,10 @@ export default function HeroSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                 <Image
                   src="/hero-cleaning.png"
-                  alt="Professional cleaning team at work"
+                  alt="Professional home and office cleaners at work in Brisbane"
                   width={600}
                   height={450}
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="object-cover w-full"
                   priority
                 />

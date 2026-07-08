@@ -19,47 +19,48 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL('https://auswidecleaners.com'),
   title: {
-    default: 'Auswide Cleaning | Professional Cleaning Services Brisbane',
-    template: '%s | Auswide Cleaning',
+    default: 'Professional House & Commercial Cleaning Services | Auswide Cleaners',
+    template: '%s | Auswide Cleaners',
   },
   description:
-    'Auswide Cleaning offers professional residential, commercial, office, end-of-lease, carpet, and deep cleaning services in Brisbane. Fully insured, police-checked cleaners. Free quotes.',
+    'Professional house cleaning, office cleaning, bond cleaning and commercial cleaning services across Brisbane. Get a free quote today.',
   keywords: [
     'cleaning services Brisbane',
-    'residential cleaning',
-    'commercial cleaning',
-    'office cleaning',
-    'end of lease cleaning',
-    'carpet cleaning',
-    'deep cleaning',
-    'professional cleaners',
+    'house cleaning Brisbane',
+    'office cleaning Brisbane',
+    'bond cleaning Brisbane',
+    'end of lease cleaning Brisbane',
+    'commercial cleaning Brisbane',
+    'carpet cleaning Brisbane',
+    'deep cleaning Brisbane',
+    'professional cleaners Brisbane',
   ],
-  authors: [{ name: 'Auswide Cleaning' }],
-  creator: 'Auswide Cleaning',
+  authors: [{ name: 'Auswide Cleaners' }],
+  creator: 'Auswide Cleaners',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: '/',
-    siteName: 'Auswide Cleaning',
-    title: 'Auswide Cleaning | Professional Cleaning Services Brisbane',
+    url: 'https://auswidecleaners.com',
+    siteName: 'Auswide Cleaners',
+    title: 'Professional House & Commercial Cleaning Services | Auswide Cleaners',
     description:
-      'Premium professional cleaning services for homes, offices, and commercial spaces in Brisbane. Trusted, insured, and guaranteed.',
+      'Professional house cleaning, office cleaning, bond cleaning and commercial cleaning services across Brisbane. Get a free quote today.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Auswide Cleaning - Professional Cleaning Services',
+        alt: 'Auswide Cleaners - Professional Cleaning Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Auswide Cleaning | Professional Cleaning Services',
-    description: 'Premium professional cleaning services in Brisbane.',
-    images: ['/og-image.jpg'],
+    title: 'Professional House & Commercial Cleaning Services | Auswide Cleaners',
+    description: 'Professional house cleaning, office cleaning, bond cleaning and commercial cleaning services across Brisbane.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -75,22 +76,30 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  category: 'cleaning services',
+  referrer: 'origin-when-cross-origin',
+  other: {
+    'theme-color': '#1E88E5',
+  },
 }
 
-// LocalBusiness JSON-LD Structured Data
+// HouseCleaningService JSON-LD Structured Data
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://auswidecleaning.com.au',
-  name: 'Auswide Cleaning',
+  '@type': 'HouseCleaningService',
+  '@id': 'https://auswidecleaners.com/#service',
+  name: 'Auswide Cleaners',
   description:
-    'Professional cleaning services for residential, commercial, office, end-of-lease, carpet, and deep cleaning in Brisbane.',
-  url: 'https://auswidecleaning.com.au',
+    'Professional house cleaning, office cleaning, bond cleaning and commercial cleaning services across Brisbane. Get a free quote today.',
+  url: 'https://auswidecleaners.com',
+  logo: 'https://auswidecleaners.com/og-image.png',
+  image: 'https://auswidecleaners.com/og-image.png',
   telephone: '+61436969438',
-  email: 'auswide71@gmail.com',
+  email: 'info@auswidecleaners.com',
+  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Brisbane',
+    streetAddress: 'Brisbane Suburbs',
     addressLocality: 'Brisbane',
     addressRegion: 'QLD',
     postalCode: '4000',
@@ -104,22 +113,22 @@ const jsonLd = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '07:00',
       closes: '19:00',
     },
   ],
-  priceRange: '$$',
-  areaServed: {
-    '@type': 'City',
-    name: 'Brisbane',
-  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'Brisbane',
+    },
+  ],
   hasMap: 'https://maps.google.com/?q=Brisbane+QLD',
-  image: 'https://auswidecleaning.com.au/og-image.jpg',
   sameAs: [
-    'https://facebook.com/auswidecleaning',
-    'https://instagram.com/auswidecleaning',
-    'https://linkedin.com/company/auswidecleaning',
+    'https://facebook.com/auswidecleaners',
+    'https://instagram.com/auswidecleaners',
+    'https://linkedin.com/company/auswidecleaners',
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -136,8 +145,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-AU" suppressHydrationWarning>
       <head>
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,12 +1,11 @@
-import type { Metadata } from 'next'
+import { constructMetadata } from '@/lib/seo'
 import GalleryClient from './GalleryClient'
 
-export const metadata: Metadata = {
-  title: 'Gallery',
-  description:
-    'See our professional cleaning results. Before and after photos of residential, commercial, carpet, and end-of-lease cleaning by Auswide Cleaning Brisbane.',
-  alternates: { canonical: '/gallery' },
-}
+export const metadata = constructMetadata({
+  title: 'Gallery & Before/After Results | Auswide Cleaners Brisbane',
+  description: 'View photos of our professional house cleaning, commercial cleaning, steam carpet washing, and vacate cleans in Brisbane.',
+  canonicalPath: '/gallery',
+})
 
 export default function GalleryPage() {
   return <GalleryClient />

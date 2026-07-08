@@ -1,14 +1,15 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/dashboard/", "/api/"],
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/dashboard/', '/dashboard/login', '/api/'],
       },
     ],
-    sitemap: "https://auswidecleaners.com/sitemap.xml",
-  };
+    sitemap: 'https://auswidecleaners.com/sitemap.xml',
+    host: 'https://auswidecleaners.com',
+  }
 }

@@ -35,5 +35,38 @@ export default async function ServicePage({ params }: { params: Params }) {
     notFound()
   }
 
-  return <ServiceDetailClient data={data} />
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://auswidecleaners.com',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Services',
+        'item': 'https://auswidecleaners.com/services',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': data.title,
+        'item': `https://auswidecleaners.com/services/${slug}`,
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <ServiceDetailClient data={data} />
+    </>
+  )
 }

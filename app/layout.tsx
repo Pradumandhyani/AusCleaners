@@ -86,7 +86,7 @@ export const metadata: Metadata = {
 // HouseCleaningService JSON-LD Structured Data
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'HouseCleaningService',
+  '@type': ['LocalBusiness', 'HouseCleaningService'],
   '@id': 'https://auswidecleaners.com/#service',
   name: 'Auswide Cleaners',
   description:
